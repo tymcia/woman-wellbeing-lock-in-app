@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7f3fb;
+  --foreground: #332a3f;
+  --card: #fffdfd;
+  --card-foreground: #332a3f;
+  --popover: #fffdfd;
+  --popover-foreground: #332a3f;
+  --primary: #7450a8;
+  --primary-foreground: #ffffff;
+  --secondary: #eee5f7;
+  --secondary-foreground: #503c68;
+  --muted: #f0eaf5;
+  --muted-foreground: #766b82;
+  --accent: #e8d9f5;
+  --accent-foreground: #4f346d;
+  --destructive: #b7465b;
+  --border: #e2d8ea;
+  --input: #ded2e8;
+  --ring: #a887ca;
+  --radius: 1rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 6px);
+  --radius-md: calc(var(--radius) - 3px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 6px);
+  --font-sans: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+* { border-color: var(--border); }
+html { background: var(--background); }
+body { min-height: 100vh; background: var(--background); color: var(--foreground); font-family: "Trebuchet MS", "Segoe UI", sans-serif; }
+button, input, textarea { font: inherit; }
+::selection { background: #dac5ec; color: #332a3f; }
+.soft-grid { background-image: linear-gradient(#8d6caf0a 1px, transparent 1px), linear-gradient(90deg, #8d6caf0a 1px, transparent 1px); background-size: 28px 28px; }
+.orbital-avatar::before, .orbital-avatar::after { content: ""; position: absolute; inset: -11px; border: 1px solid #c8afd9; border-radius: 999px; }
+.orbital-avatar::after { inset: -20px; border-style: dashed; opacity: .55; }
+@media (prefers-reduced-motion: no-preference) {
+  .gentle-enter { animation: gentle-enter .45s ease-out both; }
+  @keyframes gentle-enter { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+}

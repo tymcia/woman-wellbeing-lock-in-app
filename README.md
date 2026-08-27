@@ -2,6 +2,8 @@
 
 Lokalna wersja aplikacji React + TypeScript + Vite.
 
+##Uruchomienie w przeglądarce: https://woman-wellbeing-app.tymcia1710.workers.dev/
+
 ## Uruchomienie na Windowsie
 
 ```powershell
